@@ -1,5 +1,5 @@
 /**
- * @file dispenser.ino
+ * @file sketch.ino
  * @brief Smart Medicine Scheduler and Dispenser
  * @details An Arduino-based system that schedules and dispenses medication
  * from a vertical stack using two servo motors. The system allows setting
@@ -18,7 +18,7 @@
  * 
  * @author Mislav Dobrinić
  * @date 2025-04-14
- * @version 1.1
+ * @version 1.6
  */
 
 #include <Wire.h>
@@ -102,7 +102,7 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
 /** @brief Sleep Mode Configuration */
 /** @brief Time in milliseconds of inactivity before entering sleep mode */
-#define SLEEP_TIMEOUT 10000  // 30 seconds for testing
+#define SLEEP_TIMEOUT 10000  // 10 seconds for testing
 /** @brief Flag to indicate wake-up has occurred by button press */
 volatile bool buttonWakeFlag = false;
 /** @brief Flag to indicate wake-up has occurred by watchdog timer */
