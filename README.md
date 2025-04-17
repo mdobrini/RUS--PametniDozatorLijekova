@@ -1,15 +1,15 @@
 # Pametni dozator lijekova
 
-![GitHub](https://img.shields.io/github/license/mislavdobrinic/PametniDozatorLijekova?style=flat-square)
+![GitHub](https://img.shields.io/github/license/mdobrini/RUS--PametniDozatorLjekova?style=flat-square)
 ![Arduino](https://img.shields.io/badge/Arduino-UNO-blue?style=flat-square&logo=arduino)
 
 > Automatski sustav za precizno doziranje lijekova temeljen na Arduino platformi
 
 ## Dokumentacija
 
-- [📚 API dokumentacija (Doxygen)](https://example.com/doxygen/index.html)
-- [📖 GitHub Wiki](https://github.com/mislavdobrinic/PametniDozatorLijekova/wiki)
-- [🖥️ Wokwi simulacija](https://wokwi.com/projects/your-project-id)
+- [📚 API dokumentacija (Doxygen)](https://mdobrini.github.io/RUS--PametniDozatorLjekova/)
+- [📖 GitHub Wiki]([https://github.com/mislavdobrinic/PametniDozatorLijekova/wiki](https://github.com/mdobrini/RUS--PametniDozatorLjekova/wiki))
+- [🖥️ Wokwi simulacija]([https://wokwi.com/projects/your-project-id](https://wokwi.com/projects/428213172579332097))
 
 ## Shema spajanja
 
@@ -55,4 +55,4 @@ Pametni dozator lijekova je uređaj koji automatizira proces izdavanja lijekova 
 
 ---
 
-Razvio: [Mislav Dobrinić](https://github.com/mislavdobrinic)
+Razvio: [Mislav Dobrinić](https://github.com/mdobrini1), [Matej Ledinski](https://github.com)
