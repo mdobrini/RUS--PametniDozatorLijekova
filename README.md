@@ -7,7 +7,7 @@
 
 ## Dokumentacija
 
-- [📚 API dokumentacija (Doxygen)](https://mdobrini.github.io/RUS--PametniDozatorLjekova/)
+- [📚 API dokumentacija (Doxygen)](https://mdobrini.github.io/RUS--PametniDozatorLijekova/)
 - [📖 GitHub Wiki](https://github.com/mdobrini/RUS--PametniDozatorLjekova/wiki)
 - [🖥️ Wokwi simulacija](https://wokwi.com/projects/428213172579332097)
 
