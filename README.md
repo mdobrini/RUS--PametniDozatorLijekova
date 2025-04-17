@@ -2,6 +2,8 @@
 
 _Članovi tima: Mislav Dobrinić, Matej Ledinski_
 
+(Doxygen dokumentacija)[https://mdobrini.github.io/RUS--PametniDozatorLjekova/]
+
 ## Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme
 
 Ime projekta "Pametni dozator lijekova" naglašava glavnu namjenu projekta - pouzdano i automatsko izdavanje lijekova u zadano vrijeme. Ovaj projekt ima za cilj pomoći osobama koje moraju redovito uzimati lijekove, posebno starijim osobama ili osobama s kroničnim bolestima, osiguravajući da dobiju pravu dozu u pravo vrijeme.
