@@ -8,8 +8,8 @@
 ## Dokumentacija
 
 - [📚 API dokumentacija (Doxygen)](https://mdobrini.github.io/RUS--PametniDozatorLjekova/)
-- [📖 GitHub Wiki]([https://github.com/mislavdobrinic/PametniDozatorLijekova/wiki](https://github.com/mdobrini/RUS--PametniDozatorLjekova/wiki))
-- [🖥️ Wokwi simulacija]([https://wokwi.com/projects/your-project-id](https://wokwi.com/projects/428213172579332097))
+- [📖 GitHub Wiki](https://github.com/mdobrini/RUS--PametniDozatorLjekova/wiki)
+- [🖥️ Wokwi simulacija](https://wokwi.com/projects/428213172579332097)
 
 ## Shema spajanja
 
