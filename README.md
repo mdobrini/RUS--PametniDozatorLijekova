@@ -10,6 +10,9 @@ Pokretanje projekta preko Wokwi simulatora: [Link na Wokwi projekt](https://wokw
 
 [Doxygen dokumentacija](https://mdobrini.github.io/RUS--PametniDozatorLjekova/)
 
+![image](https://github.com/user-attachments/assets/7f42999e-f823-4d33-b676-684cb3230e67)
+
+
 ## Opis projekta
 
 Ovaj projekt je rezultat timskog rada u sklopu projektnog zadatka kolegija Razvoj ugradbenih sustava na Tehničkom veleučilištu u Zagrebu.
