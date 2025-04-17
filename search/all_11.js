@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['tablica_20povezivanja_0',['Tablica povezivanja',['../md_README.html#autotoc_md5',1,'']]],
-  ['tehnički_20zahtjevi_1',['Tehnički zahtjevi',['../md_README.html#autotoc_md10',1,'']]],
-  ['top_5fservo_5fpin_2',['TOP_SERVO_PIN',['../sketch_8ino.html#a13bece8cf2c7eee6e352c09eb7750250',1,'sketch.ino']]],
-  ['topservo_3',['topServo',['../sketch_8ino.html#a7362d00cefdb43f2ecec5acf10e0b7c3',1,'sketch.ino']]]
+  ['wake_5fbutton_5fpin_0',['WAKE_BUTTON_PIN',['../sketch_8ino.html#a78b24770646e6bf8db0332b3f5fbf728',1,'sketch.ino']]],
+  ['wake_5fled_5fpin_1',['WAKE_LED_PIN',['../sketch_8ino.html#ac7cbb76e05833efeec05342eb9da05b6',1,'sketch.ino']]],
+  ['watchdog_5fwake_5fblinks_2',['WATCHDOG_WAKE_BLINKS',['../sketch_8ino.html#ac2f569dc2e07501e71b27c03221751eb',1,'sketch.ino']]],
+  ['watchdogwakeflag_3',['watchdogWakeFlag',['../sketch_8ino.html#ab8ab3ec4be50a6b44ce907508d46b2b2',1,'sketch.ino']]]
 ];

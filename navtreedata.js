@@ -25,26 +25,16 @@
 var NAVTREE =
 [
   [ "RUS--PametniDozatorLjekova", "index.html", [
-    [ "Razvoj ugradbenih sustava", "md_README.html", [
-      [ "Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme", "md_README.html#autotoc_md1", null ],
-      [ "Opis projekta", "md_README.html#autotoc_md2", null ],
-      [ "Funkcionalni zahtjevi - Pametni dozator lijekova", "md_README.html#autotoc_md3", [
-        [ "Shema povezivanja komponenti", "md_README.html#autotoc_md4", [
-          [ "Tablica povezivanja", "md_README.html#autotoc_md5", null ]
-        ] ],
-        [ "Opća funkcionalnost", "md_README.html#autotoc_md6", null ],
-        [ "Funkcionalnosti korisničkog sučelja", "md_README.html#autotoc_md7", null ],
-        [ "Funkcionalnosti mehanizma za izdavanje lijekova", "md_README.html#autotoc_md8", null ],
-        [ "Funkcionalnosti praćenja vremena", "md_README.html#autotoc_md9", null ],
-        [ "Tehnički zahtjevi", "md_README.html#autotoc_md10", null ],
-        [ "Posebne značajke", "md_README.html#autotoc_md11", null ]
+    [ "Pametni dozator lijekova", "md_README.html", [
+      [ "Dokumentacija", "md_README.html#autotoc_md1", null ],
+      [ "Shema spajanja", "md_README.html#autotoc_md2", [
+        [ "Pin konfiguracija", "md_README.html#autotoc_md3", null ]
       ] ],
-      [ "Nefunkcionalni zahtjevi", "md_README.html#autotoc_md12", [
-        [ "Opći nefunkcionalni zahtjevi", "md_README.html#autotoc_md13", null ],
-        [ "Zahtjevi za održavanje", "md_README.html#autotoc_md14", null ],
-        [ "Zahtjevi pouzdanosti i sigurnosti", "md_README.html#autotoc_md15", null ],
-        [ "Zahtjevi korisničkog iskustva", "md_README.html#autotoc_md16", null ]
-      ] ]
+      [ "Prikaz uređaja", "md_README.html#autotoc_md4", null ],
+      [ "O projektu", "md_README.html#autotoc_md5", [
+        [ "Ključne značajke", "md_README.html#autotoc_md6", null ]
+      ] ],
+      [ "Brze upute", "md_README.html#autotoc_md7", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

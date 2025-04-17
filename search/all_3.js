@@ -9,6 +9,6 @@ var searchData=
   ['displaymenu_6',['displayMenu',['../sketch_8ino.html#a59c2926dd9b0968badf463aaf4f91422',1,'sketch.ino']]],
   ['displaymode_7',['displayMode',['../sketch_8ino.html#a3857f1cb2743e7097a2971b41bf4eb26',1,'sketch.ino']]],
   ['displaytime_8',['displayTime',['../sketch_8ino.html#abc3250bd89a060f536916deda35d86b1',1,'sketch.ino']]],
-  ['dozator_20lijekova_9',['Funkcionalni zahtjevi - Pametni dozator lijekova',['../md_README.html#autotoc_md3',1,'']]],
-  ['dozator_20lijekova_20automatski_20sustav_20za_20izdavanje_20lijekova_20u_20određeno_20vrijeme_10',['Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme',['../md_README.html#autotoc_md1',1,'']]]
+  ['dokumentacija_9',['Dokumentacija',['../md_README.html#autotoc_md1',1,'']]],
+  ['dozator_20lijekova_10',['Pametni dozator lijekova',['../md_README.html',1,'']]]
 ];

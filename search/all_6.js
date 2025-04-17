@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gettimetonextmedication_0',['getTimeToNextMedication',['../sketch_8ino.html#a420c0a6e747ea4506e55a4a3e63c71f9',1,'sketch.ino']]]
+  ['hour_0',['hour',['../structMedication.html#a2de9fa70ddafd8f7fe6805de67e4f246',1,'Medication']]]
 ];

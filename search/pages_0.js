@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['razvoj_20ugradbenih_20sustava_0',['Razvoj ugradbenih sustava',['../md_README.html',1,'']]]
+  ['dozator_20lijekova_0',['Pametni dozator lijekova',['../md_README.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RUS--PametniDozatorLjekova: Razvoj ugradbenih sustava</title>
+<title>RUS--PametniDozatorLjekova: Pametni dozator lijekova</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,275 +95,72 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Razvoj ugradbenih sustava</div></div>
+  <div class="headertitle"><div class="title">Pametni dozator lijekova</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <em>Članovi tima: Mislav Dobrinić, Matej Ledinski</em></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> <img src="https://img.shields.io/github/license/mislavdobrinic/PametniDozatorLijekova?style=flat-square" alt="GitHub" class="inline"/> <img src="https://img.shields.io/badge/Arduino-UNO-blue?style=flat-square&amp;logo=arduino" alt="Arduino" class="inline"/></p>
+<blockquote class="doxtable">
+<p>&zwj;Automatski sustav za precizno doziranje lijekova temeljen na Arduino platformi </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme</h1>
-<p>Ime projekta "Pametni dozator lijekova" naglašava glavnu namjenu projekta - pouzdano i automatsko izdavanje lijekova u zadano vrijeme. Ovaj projekt ima za cilj pomoći osobama koje moraju redovito uzimati lijekove, posebno starijim osobama ili osobama s kroničnim bolestima, osiguravajući da dobiju pravu dozu u pravo vrijeme.</p>
-<p>Pokretanje projekta preko Wokwi simulatora: <a href="https://wokwi.com/projects/428213172579332097">Link na Wokwi projekt</a></p>
-<p><a href="https://mdobrini.github.io/RUS--PametniDozatorLjekova/">Doxygen dokumentacija</a></p>
-<p><img src="https://github.com/user-attachments/assets/7f42999e-f823-4d33-b676-684cb3230e67" alt="image" class="inline"/></p>
+Dokumentacija</h1>
+<ul>
+<li><a href="https://example.com/doxygen/index.html">📚 API dokumentacija (Doxygen)</a></li>
+<li><a href="https://github.com/mislavdobrinic/PametniDozatorLijekova/wiki">📖 GitHub Wiki</a></li>
+<li><a href="https://wokwi.com/projects/your-project-id">🖥️ Wokwi simulacija</a></li>
+</ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Opis projekta</h1>
-<p>Ovaj projekt je rezultat timskog rada u sklopu projektnog zadatka kolegija Razvoj ugradbenih sustava na Tehničkom veleučilištu u Zagrebu.</p>
-<p>Cilj projekta je izraditi pouzdani elektronički sustav koji će pomoći u pravilnom i redovitom uzimanju lijekova. Motivacija za ovaj projekt proizlazi iz sve veće potrebe za pomoćnim tehnologijama u zdravstvenoj skrbi, posebno za starije osobe koje često zaboravljaju uzeti svoje lijekove u određeno vrijeme. Sustav koristi Arduino platformu s različitim komponentama za praćenje vremena, izdavanje lijekova i interakciju s korisnikom, sve s ciljem povećanja sigurnosti i poboljšanja kvalitete života korisnika.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Funkcionalni zahtjevi - Pametni dozator lijekova</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Shema povezivanja komponenti</h2>
-<h3><a class="anchor" id="autotoc_md5"></a>
-Tablica povezivanja</h3>
+Shema spajanja</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Pin konfiguracija</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Arduino Pin   </th><th class="markdownTableHeadNone">Komponenta   </th><th class="markdownTableHeadNone">Priključak komponente   </th><th class="markdownTableHeadNone">Opis    </th></tr>
+<th class="markdownTableHeadNone">Komponenta   </th><th class="markdownTableHeadNone">Arduino Pin   </th><th class="markdownTableHeadNone">Opis    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">A4   </td><td class="markdownTableBodyNone">LCD 16x2 (I2C)   </td><td class="markdownTableBodyNone">SDA   </td><td class="markdownTableBodyNone">I2C podatkovni signal    </td></tr>
+<td class="markdownTableBodyNone">LCD I2C   </td><td class="markdownTableBodyNone">SDA (A4), SCL (A5)   </td><td class="markdownTableBodyNone">16x2 LCD zaslon preko I2C sučelja    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">A5   </td><td class="markdownTableBodyNone">LCD 16x2 (I2C)   </td><td class="markdownTableBodyNone">SCL   </td><td class="markdownTableBodyNone">I2C clock signal    </td></tr>
+<td class="markdownTableBodyNone">RTC DS1307   </td><td class="markdownTableBodyNone">SDA (A4), SCL (A5)   </td><td class="markdownTableBodyNone">Modul za precizno praćenje vremena    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">A4   </td><td class="markdownTableBodyNone">RTC modul DS1307   </td><td class="markdownTableBodyNone">SDA   </td><td class="markdownTableBodyNone">I2C podatkovni signal (dijeljen s LCD)    </td></tr>
+<td class="markdownTableBodyNone">Keypad   </td><td class="markdownTableBodyNone">3, 4, 5, 7 (redovi) + A0, A1, A2, A3 (stupci)   </td><td class="markdownTableBodyNone">4x4 matrična tipkovnica    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">A5   </td><td class="markdownTableBodyNone">RTC modul DS1307   </td><td class="markdownTableBodyNone">SCL   </td><td class="markdownTableBodyNone">I2C clock signal (dijeljen s LCD)    </td></tr>
+<td class="markdownTableBodyNone">Gornji servo   </td><td class="markdownTableBodyNone">9   </td><td class="markdownTableBodyNone">Kontrolira ulaz lijeka u područje čekanja    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">9   </td><td class="markdownTableBodyNone">Gornji servo motor   </td><td class="markdownTableBodyNone">Signal   </td><td class="markdownTableBodyNone">PWM signal za kontrolu gornjeg serva    </td></tr>
+<td class="markdownTableBodyNone">Donji servo   </td><td class="markdownTableBodyNone">10   </td><td class="markdownTableBodyNone">Kontrolira izlaz lijeka iz područja čekanja    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">10   </td><td class="markdownTableBodyNone">Donji servo motor   </td><td class="markdownTableBodyNone">Signal   </td><td class="markdownTableBodyNone">PWM signal za kontrolu donjeg serva    </td></tr>
+<td class="markdownTableBodyNone">Zujalica   </td><td class="markdownTableBodyNone">11   </td><td class="markdownTableBodyNone">Zvučna signalizacija doziranja    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">11   </td><td class="markdownTableBodyNone">Buzzer   </td><td class="markdownTableBodyNone">Signal   </td><td class="markdownTableBodyNone">PWM signal za zvučne signale    </td></tr>
+<td class="markdownTableBodyNone">LED indikator   </td><td class="markdownTableBodyNone">12   </td><td class="markdownTableBodyNone">Vizualna signalizacija buđenja    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">12   </td><td class="markdownTableBodyNone">Indikator LED   </td><td class="markdownTableBodyNone">Anoda   </td><td class="markdownTableBodyNone">Indikacija buđenja iz sleep moda    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">Tipka za buđenje   </td><td class="markdownTableBodyNone">Switch   </td><td class="markdownTableBodyNone">Buđenje uređaja iz sleep moda (spojen na INT0)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Red 1   </td><td class="markdownTableBodyNone">Prvi red tipkovnice    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Red 2   </td><td class="markdownTableBodyNone">Drugi red tipkovnice    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Red 3   </td><td class="markdownTableBodyNone">Treći red tipkovnice    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Red 4   </td><td class="markdownTableBodyNone">Četvrti red tipkovnice    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">A0   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Stupac 1   </td><td class="markdownTableBodyNone">Prvi stupac tipkovnice    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">A1   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Stupac 2   </td><td class="markdownTableBodyNone">Drugi stupac tipkovnice    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">A2   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Stupac 3   </td><td class="markdownTableBodyNone">Treći stupac tipkovnice    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">A3   </td><td class="markdownTableBodyNone">4x4 tipkovnica   </td><td class="markdownTableBodyNone">Stupac 4   </td><td class="markdownTableBodyNone">Četvrti stupac tipkovnice    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">5V   </td><td class="markdownTableBodyNone">Sve komponente   </td><td class="markdownTableBodyNone">VCC   </td><td class="markdownTableBodyNone">Napajanje za sve komponente    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GND   </td><td class="markdownTableBodyNone">Sve komponente   </td><td class="markdownTableBodyNone">GND   </td><td class="markdownTableBodyNone">Zajedničko uzemljenje   </td></tr>
+<td class="markdownTableBodyNone">Tipka buđenja   </td><td class="markdownTableBodyNone">2 (INT0)   </td><td class="markdownTableBodyNone">Gumb za ručno buđenje iz sleep moda   </td></tr>
 </table>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Prikaz uređaja</h1>
+<p><img src="https://example.com/path/to/your/image.jpg" alt="Pametni dozator lijekova" class="inline"/></p>
+<p><em>Ovdje dodati sliku prototipa ili 3D model</em></p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+O projektu</h1>
+<p>Pametni dozator lijekova je uređaj koji automatizira proces izdavanja lijekova prema programiranom rasporedu. Dizajniran je prvenstveno za starije osobe i pacijente s kroničnim bolestima koji trebaju redovito uzimati lijekove.</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
-Opća funkcionalnost</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-1.1   </td><td class="markdownTableBodyNone">Uređaj mora imati dva servo motora za kontrolu ispuštanja spremnika lijekova   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-1.2   </td><td class="markdownTableBodyNone">Uređaj mora prikazivati trenutno vrijeme na LCD zaslonu   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-1.3   </td><td class="markdownTableBodyNone">Uređaj mora imati tipkovnicu (keypad) za unos podataka   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-1.4   </td><td class="markdownTableBodyNone">Uređaj mora imati režim uštede energije (sleep mode)   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-1.5   </td><td class="markdownTableBodyNone">Uređaj mora čuvati postavke nakon gubitka napajanja   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-1.6   </td><td class="markdownTableBodyNone">Uređaj mora podržavati do 5 različitih vremena za lijekove   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-1.7   </td><td class="markdownTableBodyNone">Uređaj mora imati zvučni signal (buzzer) za obavijesti   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-1.8   </td><td class="markdownTableBodyNone">Uređaj mora imati namjensku tipku za buđenje iz režima uštede energije   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-1.9   </td><td class="markdownTableBodyNone">Uređaj mora imati LED indikator koji treperi prilikom buđenja   </td><td class="markdownTableBodyNone">Srednji   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Funkcionalnosti korisničkog sučelja</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-2.1   </td><td class="markdownTableBodyNone">Korisnik može postaviti vrijeme za svaki lijek pomoću tipkovnice   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-2.2   </td><td class="markdownTableBodyNone">Korisnik može pregledati sva postavljena vremena za lijekove   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-2.3   </td><td class="markdownTableBodyNone">Korisnik može ručno testirati dispenser mehanizam   </td><td class="markdownTableBodyNone">Nizak    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-2.4   </td><td class="markdownTableBodyNone">Uređaj prikazuje trenutno vrijeme i status na glavnom zaslonu   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-2.5   </td><td class="markdownTableBodyNone">Uređaj prikazuje poruku kad je vrijeme za izdavanje lijeka   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-2.6   </td><td class="markdownTableBodyNone">Korisnik može deaktivirati određeni raspored lijeka   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-2.7   </td><td class="markdownTableBodyNone">Korisnik može probuditi uređaj iz sleep moda pritiskom na tipku   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Funkcionalnosti mehanizma za izdavanje lijekova</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-3.1   </td><td class="markdownTableBodyNone">Gornji servo motor otvara se da propusti spremnik s lijekom   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-3.2   </td><td class="markdownTableBodyNone">Donji servo motor otvara se da ispusti spremnik s lijekom   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-3.3   </td><td class="markdownTableBodyNone">Mehanizam osigurava da samo jedan spremnik lijeka bude ispušten   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-3.4   </td><td class="markdownTableBodyNone">Uređaj prikazuje status procesa ispuštanja lijeka na zaslonu   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-3.5   </td><td class="markdownTableBodyNone">Proces ispuštanja lijekova mora biti sekvencijalan i pouzdano kontroliran   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-3.6   </td><td class="markdownTableBodyNone">Uređaj mora emitirati zvučni signal nakon uspješnog izdavanja lijeka   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-3.7   </td><td class="markdownTableBodyNone">Uređaj se mora automatski probuditi iz sleep moda kada je vrijeme za lijek   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md9"></a>
-Funkcionalnosti praćenja vremena</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-4.1   </td><td class="markdownTableBodyNone">Uređaj koristi RTC DS1307 modul za točno praćenje vremena   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-4.2   </td><td class="markdownTableBodyNone">Uređaj odbrojava svaki dan nove cikluse za lijekove   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-4.3   </td><td class="markdownTableBodyNone">Uređaj resetira status izdanih lijekova u ponoć   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-4.4   </td><td class="markdownTableBodyNone">Uređaj provjerava raspored svakih nekoliko sekundi   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-4.5   </td><td class="markdownTableBodyNone">Uređaj periodički provjerava vrijeme čak i u režimu uštede energije   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md10"></a>
-Tehnički zahtjevi</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-6.1   </td><td class="markdownTableBodyNone">Uređaj koristi Arduino Uno platformu   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-6.2   </td><td class="markdownTableBodyNone">LCD zaslon povezan je putem I2C sučelja   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-6.3   </td><td class="markdownTableBodyNone">Tipkovnica je 4x4 matrica   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-6.4   </td><td class="markdownTableBodyNone">Servo motori montiraju se vertikalno jedan iznad drugog   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-6.5   </td><td class="markdownTableBodyNone">Uređaj koristi EEPROM za pohranu rasporeda lijekova   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-6.6   </td><td class="markdownTableBodyNone">Uređaj koristi Watchdog timer za periodičko buđenje iz sleep moda   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-6.7   </td><td class="markdownTableBodyNone">RTC DS1307 modul s baterijom osigurava točno vrijeme i nakon nestanka napajanja   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-6.8   </td><td class="markdownTableBodyNone">Buzzer emitira zvučne signale frekvencije oko 2kHz za jasno čujne obavijesti   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-6.9   </td><td class="markdownTableBodyNone">Tipka za buđenje povezana je na INT0 (pin 2) za efikasno buđenje iz sleep moda   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md11"></a>
-Posebne značajke</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-7.1   </td><td class="markdownTableBodyNone">Korisničko sučelje nudi jasne upute za podešavanje i korištenje   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-7.2   </td><td class="markdownTableBodyNone">Struktura koda mora biti dobro dokumentirana s Doxygen komentarima   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-7.3   </td><td class="markdownTableBodyNone">Kod mora biti modularan i održiv   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">F-7.4   </td><td class="markdownTableBodyNone">Uređaj mora biti siguran za upotrebu   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">F-7.5   </td><td class="markdownTableBodyNone">Zvučni signali moraju jasno ukazivati na izdavanje lijeka   </td><td class="markdownTableBodyNone">Srednji   </td></tr>
-</table>
-<h1><a class="anchor" id="autotoc_md12"></a>
-Nefunkcionalni zahtjevi</h1>
-<p>Nefunkcionalni zahtjevi i zahtjevi domene primjene dopunjuju funkcionalne zahtjeve. Oni opisuju kako se sustav treba ponašati i koja ograničenja treba poštivati (performanse, korisničko iskustvo, pouzdanost, standardi kvalitete, sigurnost...).</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Opći nefunkcionalni zahtjevi</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Zahtjev   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.1   </td><td class="markdownTableBodyNone">Sustav mora raditi neprekidno bez grešaka najmanje 1000 sati   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-1.2   </td><td class="markdownTableBodyNone">Vrijeme pokretanja uređaja ne smije biti duže od 2 sekunde   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.3   </td><td class="markdownTableBodyNone">Uređaj mora biti kompatibilan s industrijskim standardima (npr. I2C, UART)   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-1.4   </td><td class="markdownTableBodyNone">Uređaj mora biti energetski učinkovit, s potrošnjom ispod 100 mW u stanju mirovanja   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.5   </td><td class="markdownTableBodyNone">Uređaj mora raditi u temperaturnom rasponu od -10°C do +60°C   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-1.6   </td><td class="markdownTableBodyNone">Softver mora biti dokumentiran i testiran prema definiranim testnim scenarijima   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.7   </td><td class="markdownTableBodyNone">Korisnički interfejs mora biti intuitivan i lako razumljiv   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-1.8   </td><td class="markdownTableBodyNone">Vrijeme odziva na pritisak tipke mora biti kraće od 200 ms   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.9   </td><td class="markdownTableBodyNone">Uređaj mora biti otporan na kratkotrajne prekide napajanja   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-1.10   </td><td class="markdownTableBodyNone">Uređaj mora biti siguran za upotrebu od strane starijih osoba   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-1.11   </td><td class="markdownTableBodyNone">Zvučni signal mora biti dovoljno glasan da se čuje u prostoriji   </td><td class="markdownTableBodyNone">Srednji   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md14"></a>
-Zahtjevi za održavanje</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">ID zahtjeva   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-3.1   </td><td class="markdownTableBodyNone">Sustav treba biti oblikovan tako da omogućuje jednostavno održavanje   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-3.2   </td><td class="markdownTableBodyNone">Sustav treba omogućiti jednostavno punjenje spremnika s lijekovima   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-3.3   </td><td class="markdownTableBodyNone">Servo motori moraju biti lako dostupni za zamjenu ili popravak   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-3.4   </td><td class="markdownTableBodyNone">Sustav treba imati dovoljnu dokumentaciju   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-3.5   </td><td class="markdownTableBodyNone">Kod sustava treba biti dobro dokumentiran Doxygen komentarima   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-3.6   </td><td class="markdownTableBodyNone">Sustav treba sadržavati dijagnostičke funkcije za provjeru ispravnosti   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-3.7   </td><td class="markdownTableBodyNone">Sustav treba imati mogućnost vraćanja na tvornički zadane postavke   </td><td class="markdownTableBodyNone">Srednji   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md15"></a>
-Zahtjevi pouzdanosti i sigurnosti</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">ID zahtjeva   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-4.1   </td><td class="markdownTableBodyNone">Sustav mora osigurati da se lijekovi izdaju samo u zadano vrijeme   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-4.2   </td><td class="markdownTableBodyNone">Sustav mora biti pouzdan i ne smije propustiti izdavanje lijeka   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-4.3   </td><td class="markdownTableBodyNone">Sustav treba imati mehanizam samotestiranja pri pokretanju   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-4.4   </td><td class="markdownTableBodyNone">Mehanički dijelovi moraju izdržati najmanje 10.000 ciklusa rada   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-4.5   </td><td class="markdownTableBodyNone">Spremnici lijekova ne smiju se zaglaviti u mehanizmu za izdavanje   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-4.6   </td><td class="markdownTableBodyNone">U slučaju nestanka struje, RTC DS1307 mora održavati točno vrijeme   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md16"></a>
-Zahtjevi korisničkog iskustva</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">ID zahtjeva   </th><th class="markdownTableHeadNone">Opis   </th><th class="markdownTableHeadNone">Prioritet    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-5.1   </td><td class="markdownTableBodyNone">Sustav treba biti jednostavan za uporabu bez potrebe za tehničkim predznanjem   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-5.2   </td><td class="markdownTableBodyNone">Proces postavljanja vremena za lijekove ne smije imati više od 5 koraka   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-5.3   </td><td class="markdownTableBodyNone">Sustav mora pružati jasne povratne informacije o svim postupcima   </td><td class="markdownTableBodyNone">Visok    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-5.4   </td><td class="markdownTableBodyNone">Zvučni i vizualni signali moraju biti prilagođeni starijim osobama   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">NF-5.5   </td><td class="markdownTableBodyNone">Svi natpisi na zaslonu moraju biti čitljivi s udaljenosti od 1 metra   </td><td class="markdownTableBodyNone">Srednji    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">NF-5.6   </td><td class="markdownTableBodyNone">Zvučni signal mora biti jasno raspoznatljiv kao podsjetnik za uzimanje lijeka   </td><td class="markdownTableBodyNone">Visok   </td></tr>
-</table>
+Ključne značajke</h2>
+<ul>
+<li>Podržava do 5 različitih vremena doziranja</li>
+<li>Precizno praćenje vremena preko RTC modula</li>
+<li>Energetski učinkovit rad s periodima spavanja</li>
+<li>Jednostavno korisničko sučelje s LCD zaslonom i tipkovnicom</li>
+<li>Trajna pohrana postavki u EEPROM</li>
+<li>Zvučna i vizualna signalizacija</li>
+<li>Mehanizam za sigurno doziranje lijekova pomoću dva servo motora</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Brze upute</h1>
+<ol type="1">
+<li>Pritisnite tipku <b>A</b> za postavljanje rasporeda doziranja</li>
+<li>Pritisnite tipku <b>B</b> za pregled svih postavljenih vremena</li>
+<li>Pritisnite tipku <b>C</b> za testiranje mehanizma doziranja</li>
+<li>Pritisnite tipku <b>D</b> za povratak na prikaz vremena</li>
+</ol>
+<hr  />
+<p>Razvio: <a href="https://github.com/mislavdobrinic">Mislav Dobrinić</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
