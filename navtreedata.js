@@ -24,12 +24,51 @@
 */
 var NAVTREE =
 [
-  [ "RUS--PametniDozatorLjekova", "index.html", ]
+  [ "RUS--PametniDozatorLjekova", "index.html", [
+    [ "Razvoj ugradbenih sustava", "md_README.html", [
+      [ "Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme", "md_README.html#autotoc_md1", null ],
+      [ "Opis projekta", "md_README.html#autotoc_md2", null ],
+      [ "Funkcionalni zahtjevi - Pametni dozator lijekova", "md_README.html#autotoc_md3", [
+        [ "Shema povezivanja komponenti", "md_README.html#autotoc_md4", [
+          [ "Tablica povezivanja", "md_README.html#autotoc_md5", null ]
+        ] ],
+        [ "Opća funkcionalnost", "md_README.html#autotoc_md6", null ],
+        [ "Funkcionalnosti korisničkog sučelja", "md_README.html#autotoc_md7", null ],
+        [ "Funkcionalnosti mehanizma za izdavanje lijekova", "md_README.html#autotoc_md8", null ],
+        [ "Funkcionalnosti praćenja vremena", "md_README.html#autotoc_md9", null ],
+        [ "Tehnički zahtjevi", "md_README.html#autotoc_md10", null ],
+        [ "Posebne značajke", "md_README.html#autotoc_md11", null ]
+      ] ],
+      [ "Nefunkcionalni zahtjevi", "md_README.html#autotoc_md12", [
+        [ "Opći nefunkcionalni zahtjevi", "md_README.html#autotoc_md13", null ],
+        [ "Zahtjevi za održavanje", "md_README.html#autotoc_md14", null ],
+        [ "Zahtjevi pouzdanosti i sigurnosti", "md_README.html#autotoc_md15", null ],
+        [ "Zahtjevi korisničkog iskustva", "md_README.html#autotoc_md16", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
