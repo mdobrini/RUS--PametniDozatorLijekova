@@ -28,9 +28,8 @@
 
 ## Prikaz uređaja
 
-![Pametni dozator lijekova](https://example.com/path/to/your/image.jpg)
+![image](https://github.com/user-attachments/assets/68a581ea-cd3e-4c64-9ddd-8ea13e9f110c)
 
-_Ovdje dodati sliku prototipa ili 3D model_
 
 ## O projektu
 
