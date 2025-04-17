@@ -2,7 +2,7 @@
 
 _Članovi tima: Mislav Dobrinić, Matej Ledinski_
 
-(Doxygen dokumentacija)[https://mdobrini.github.io/RUS--PametniDozatorLjekova/]
+[Doxygen dokumentacija](https://mdobrini.github.io/RUS--PametniDozatorLjekova/)
 
 ## Pametni dozator lijekova - Automatski sustav za izdavanje lijekova u određeno vrijeme
 
