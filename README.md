@@ -54,4 +54,4 @@ Pametni dozator lijekova je uređaj koji automatizira proces izdavanja lijekova 
 
 ---
 
-Razvio: [Mislav Dobrinić](https://github.com/mdobrini1), [Matej Ledinski](https://github.com)
+Razvio: [Mislav Dobrinić](https://github.com/MDBossss), [Matej Ledinski](https://github.com)
